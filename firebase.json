@@ -103,6 +103,31 @@
       ]
     },
     {
+      "target": "showcase",
+      "public": "showcase/dist/portfolio-showcase",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://gongarce.io"
+            }
+          ]
+        },
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "target": "styleguide",
       "public": "styleguide/dist",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],

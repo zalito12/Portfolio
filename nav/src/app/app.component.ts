@@ -7,9 +7,9 @@ import { Component, OnInit } from "@angular/core";
 })
 export class AppComponent implements OnInit {
   public PAGES = {
-    HOME: "HOME",
-    SHOWCASE: "SHOWCASE",
-    CONTACT: "CONTACT",
+    HOME: "home",
+    SHOWCASE: "showcase",
+    CONTACT: "contact",
   };
 
   public page = this.PAGES.HOME;
@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     // Can't use router cause this app is in root url
-    const path = window.location?.pathname?.toUpperCase();
+    const path = window.location?.pathname?.toLowerCase();
     if (!path) {
       return;
     }
