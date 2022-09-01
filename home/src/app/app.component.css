@@ -1,0 +1,70 @@
+.content {
+  margin-top: 500px;
+}
+.parallax {
+  background: #001233;
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin-top: 0;
+  overflow: hidden;
+}
+.parallax-layer {
+  background-repeat: repeat-x;
+  width: 100%;
+  position: fixed;
+  background-size: auto 500px;
+  background-position: top center;
+  height: 500px;
+  min-width: 500px;
+}
+.back-stars {
+  background-image: url("__webpack_public_path__/assets/images/stars.svg");
+  mix-blend-mode: color-dodge;
+}
+.front-stars {
+  background-image: url("__webpack_public_path__/assets/images/stars-1.gif");
+  background-repeat: no-repeat;
+  mix-blend-mode: color-dodge;
+}
+.back-clouds {
+  background-image: url("__webpack_public_path__/assets/images/clouds1.svg");
+  background-repeat: no-repeat;
+}
+.front-clouds {
+  background-image: url("__webpack_public_path__/assets/images/clouds2.svg");
+  background-repeat: no-repeat;
+}
+.planets {
+  background-image: url("__webpack_public_path__/assets/images/planets.svg");
+  background-repeat: no-repeat;
+}
+.front {
+  background-image: url("__webpack_public_path__/assets/images/front.svg");
+}
+.s2 {
+  background-position-x: left;
+  background-position-y: 66px;
+}
+.s3 {
+  background-position-x: right;
+  background-position-y: -35px;
+}
+@media (max-width: 900px) {
+  .parallax-layer {
+    background-size: 100%;
+  }
+  .content {
+    margin-top: 325px;
+  }
+}
+@media (max-width: 600px) {
+  .parallax-layer {
+    background-size: 100%;
+  }
+  .content {
+    margin-top: 210px;
+  }
+}

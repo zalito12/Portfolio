@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+.content {
+  position: relative;
+  width: 100%;
+  background: #141921;
+}
+
+.content .wrapper {
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+  color: #eee;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+.content h1 {
+  font-size: 1.8rem;
+}
+.content h2 {
+  font-size: 1.6rem;
+  margin-top: 3em;
+}
+.content p {
+  font-size: 1.3rem;
+}
+
+body {
+  background: #141921;
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+}
+input[type="text"] {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  color: #fff;
+  border-bottom: 0.2em solid #fff;
+}
+input[type="text"].iconized {
+  padding-left: 1.6em;
+}
+.fa.input,
+.fas.input {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+/* Media queries */
+
+@media (max-width: 900px) {
+  .content .wrapper {
+    width: 100%;
+    padding: 1em;
+  }
+  .content h1 {
+    font-size: 1.5rem;
+  }
+  .content h2 {
+    font-size: 1.2rem;
+    margin-top: 2em;
+  }
+  .content p {
+    font-size: 1rem;
+  }
+}
+
+/* Loading style */
+.placeholder-loading {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50%;
+}
+.placeholder-loading span {
+  animation: 1s blink infinite;
+}
+.placeholder-loading span:nth-child(2) {
+  animation-delay: 250ms;
+}
+.placeholder-loading span:nth-child(3) {
+  animation-delay: 500ms;
+}
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}

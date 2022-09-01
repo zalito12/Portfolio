@@ -1,0 +1,161 @@
+[
+  {
+    "type": "LANGUAGES",
+    "name": "PHP",
+    "link": "https://www.php.net/manual/en/intro-whatis.php",
+    "images": null,
+    "icons": [{ "class": "fab fa-php", "color": "#7377ad" }],
+    "experience": 61,
+    "fun": 75
+  },
+  {
+    "type": "LANGUAGES",
+    "name": "HTML5 & CSS3",
+    "link": "https://www.google.com/search?q=html5+and+css3&oq=html5+and+css3",
+    "images": null,
+    "icons": [
+      { "class": "fab fa-html5", "color": "#dd4b25" },
+      { "class": "fab fa-css3", "color": "#116cb5" }
+    ],
+    "experience": 60,
+    "fun": 60
+  },
+  {
+    "type": "LANGUAGES",
+    "name": "JavaScript",
+    "link": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+    "images": null,
+    "icons": [{ "class": "fab fa-js", "color": "#efd81d" }],
+    "experience": 72,
+    "fun": 70
+  },
+  {
+    "type": "LANGUAGES",
+    "name": "Java",
+    "link": "https://www.java.com/about/",
+    "images": null,
+    "icons": [{ "class": "fab fa-java", "color": "#507f9d" }],
+    "experience": 76,
+    "fun": 65
+  },
+  {
+    "type": "LANGUAGES",
+    "name": "C",
+    "link": "https://en.wikipedia.org/wiki/C_(programming_language)",
+    "images": ["c-programming.svg"],
+    "experience": 58,
+    "fun": 80
+  },
+  {
+    "type": "LANGUAGES",
+    "name": "Python",
+    "link": "https://www.python.org/",
+    "icons": [{ "class": "fab fa-python", "color": "#fede56" }],
+    "experience": 38,
+    "fun": 60
+  },
+  {
+    "type": "LANGUAGES",
+    "name": "Erlang",
+    "link": "https://www.erlang.org/",
+    "icons": [{ "class": "fab fa-erlang", "color": "#8c032f" }],
+    "experience": 29,
+    "fun": 90
+  },
+  {
+    "type": "FRAMEWORKS",
+    "name": "Angular",
+    "link": "https://angular.io/",
+    "images": null,
+    "icons": [{ "class": "fab fa-angular", "color": "#d6022f" }],
+    "experience": 85,
+    "fun": 85
+  },
+  {
+    "type": "FRAMEWORKS",
+    "name": "Android",
+    "link": "https://developer.android.com/",
+    "images": null,
+    "icons": [{ "class": "fab fa-android", "color": "#9fc037" }],
+    "experience": 69,
+    "fun": 80
+  },
+  {
+    "type": "FRAMEWORKS",
+    "name": "Laravel",
+    "link": "https://laravel.com/",
+    "images": null,
+    "icons": [{ "class": "fab fa-laravel", "color": "#f82d21" }],
+    "experience": 35,
+    "fun": 75
+  },
+  {
+    "type": "FRAMEWORKS",
+    "name": "Play",
+    "link": "https://www.playframework.com/",
+    "images": ["play.svg"],
+    "experience": 65,
+    "fun": 70
+  },
+  {
+    "type": "FRAMEWORKS",
+    "name": "Bootstrap",
+    "link": "https://getbootstrap.com/",
+    "images": null,
+    "icons": [{ "class": "fab fa-bootstrap", "color": "#8023f9" }],
+    "experience": 65,
+    "fun": 40
+  },
+  {
+    "type": "FRAMEWORKS",
+    "name": "Wordpress",
+    "link": "https://wordpress.org/",
+    "images": null,
+    "icons": [{ "class": "fab fa-wordpress-simple", "color": "#207196" }],
+    "experience": 67,
+    "fun": 64
+  },
+  {
+    "type": "TOOLS",
+    "name": "Git",
+    "link": "https://git-scm.com/",
+    "images": null,
+    "icons": [{ "class": "fab fa-git-alt", "color": "#e84e31" }],
+    "experience": 70,
+    "fun": 90
+  },
+  {
+    "type": "TOOLS",
+    "name": "Amazon AWS",
+    "link": "https://aws.amazon.com/",
+    "images": null,
+    "icons": [{ "class": "fab fa-aws", "color": "#ec912d" }],
+    "experience": 37,
+    "fun": 58
+  },
+  {
+    "type": "TOOLS",
+    "name": "Docker",
+    "link": "https://www.docker.com/",
+    "images": null,
+    "icons": [{ "class": "fab fa-docker", "color": "#2291e6" }],
+    "experience": 29,
+    "fun": 42
+  },
+  {
+    "type": "TOOLS",
+    "name": "Google Cloud platform",
+    "link": "https://cloud.google.com/",
+    "images": ["cloud-logo.svg"],
+    "experience": 48,
+    "fun": 57
+  },
+  {
+    "type": "TOOLS",
+    "name": "Adobe Illustrator",
+    "link": "https://www.adobe.com/es/products/illustrator.html",
+    "images": ["illustrator.svg"],
+    "experience": 43,
+    "fun": 72
+  }
+]

@@ -1,0 +1,87 @@
+.menu {
+  position: fixed;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  z-index: 99;
+}
+.menu ul li:not(:first-child) {
+  margin-top: 0.2em;
+}
+.nav {
+  top: 10em;
+}
+.nav-min {
+  top: 0;
+  padding: 0.8em;
+  margin: 0.8em;
+  background: black;
+  border: 1px solid #aaa;
+  display: none !important;
+}
+.nav ul {
+  margin-left: 2em;
+  animation: float 6s ease-in-out infinite;
+}
+.nav ul:hover {
+  animation-play-state: paused;
+}
+.nav ul li {
+  text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.5),
+    0 0 0.3em rgba(255, 255, 255, 0.4), 0 0 0.5em rgba(255, 255, 255, 0.2);
+}
+.nav ul li a {
+  transition: all 0.4s ease-out;
+}
+.nav ul li a:hover {
+  text-shadow: 0 0 0.3em rgba(255, 255, 255, 0.7),
+    0 0 0.5em rgba(255, 255, 255, 0.6), 0 0 0.8em rgba(255, 255, 255, 0.5);
+}
+.nav-min ul {
+  margin-top: 0.8em;
+}
+.nav-min ul.show {
+  display: inherit;
+}
+.term {
+  animation: blink-animation 1.2s steps(2, start) infinite;
+}
+.t-600 {
+  display: none;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(1em);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    display: none !important;
+  }
+  .nav-min {
+    display: inherit !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .t-900 {
+    display: none;
+  }
+  .t-600 {
+    display: inherit;
+  }
+}

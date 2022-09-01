@@ -1,0 +1,50 @@
+<ng-template #activeRoute>
+  <li><a href="#" (click)="page = PAGES.HOME">$ cd ./</a></li>
+</ng-template>
+<div class="nav menu">
+  <ul>
+    <li>
+      <a
+        routerLink="/home"
+        [ngClass]="{ active: page === PAGES.HOME }"
+        (click)="page = PAGES.HOME"
+        >- Home</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/showcase"
+        [ngClass]="{ active: page === PAGES.SHOWCASE }"
+        (click)="page = PAGES.SHOWCASE"
+        >- Projects</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/contact"
+        [ngClass]="{ active: page === PAGES.CONTACT }"
+        (click)="page = PAGES.CONTACT"
+        >- Contact</a
+      >
+    </li>
+  </ul>
+</div>
+<div class="nav-min menu">
+  <i class="fas fa-terminal toggle t-600" (click)="showMenu = !showMenu"></i>
+  <span class="toggle t-900" (click)="showMenu = !showMenu"
+    >~/home$ <span class="term">|</span></span
+  >
+  <ul *ngIf="showMenu">
+    <li *ngIf="page !== PAGES.HOME; else activeRoute">
+      <a routerLink="/home" (click)="page = PAGES.HOME">$ cd /home</a>
+    </li>
+    <li *ngIf="page !== PAGES.SHOWCASE; else activeRoute">
+      <a routerLink="/showcase" (click)="page = PAGES.SHOWCASE"
+        >$ cd /projects</a
+      >
+    </li>
+    <li *ngIf="page !== PAGES.CONTACT; else activeRoute">
+      <a routerLink="/contact" (click)="page = PAGES.CONTACT">$ cd /contact</a>
+    </li>
+  </ul>
+</div>

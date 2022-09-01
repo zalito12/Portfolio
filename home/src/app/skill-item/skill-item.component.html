@@ -1,0 +1,22 @@
+<ng-template #topicImage>
+  <a target="_blank" [href]="url">
+    <img *ngFor="let image of images" [src]="getImageUrl(image)" [alt]="name" />
+  </a>
+</ng-template>
+<div class="skill">
+  <div class="progress">
+    <div class="barOverflow">
+      <div class="bar" #bar1></div>
+      <div class="bar fun" #bar2></div>
+    </div>
+    <div class="topic">
+      <a *ngIf="!images; else topicImage" target="_blank" [href]="url">
+        <i
+          *ngFor="let icon of icons"
+          [class]="icon.class"
+          [style]="'color:' + icon.color"
+        ></i>
+      </a>
+    </div>
+  </div>
+</div>

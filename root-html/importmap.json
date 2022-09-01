@@ -1,0 +1,14 @@
+{
+  "imports": {
+    "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+    "single-spa-layout": "https://unpkg.com/single-spa-layout@1.0.0-beta.2/dist/system/single-spa-layout.min.js",
+    "rxjs": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs@6.6.3-fix.0/system/es5/rxjs.min.js",
+    "rxjs/operators": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs@6.6.3-fix.0/system/es5/rxjs-operators.min.js",
+    "@gongarce/root-config": "/gongarce-root-config.js",
+    "@gongarce/styleguide": "https://style.gongarce.io/gongarce-styleguide.js",
+    "@gongarce/api": "https://api.gongarce.io/gongarce-api.js",
+    "nav": "https://nav.gongarce.io/main.js",
+    "portfolio-home": "https://home.gongarce.io/main.js",
+    "portfolio-showcase": "https://showcase.gongarce.io/main.js"
+  }
+}

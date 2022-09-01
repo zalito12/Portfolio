@@ -1,0 +1,96 @@
+p.loading {
+  font-style: italic;
+  color: #aaa;
+}
+.order {
+  color: #0c5b77;
+  font-weight: 600;
+  cursor: pointer;
+}
+.order.active {
+  color: #34c9ff;
+}
+.order.fun {
+  color: #796b15;
+}
+.order.fun.active {
+  color: #ffde00;
+}
+.skills {
+  position: relative;
+}
+.skills ul.items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.tooltip {
+  position: absolute;
+  background: #141921;
+  border: 2px solid #fff;
+  border-radius: 0.4em;
+  padding: 0.5em;
+  z-index: 99;
+  right: 0;
+  margin-top: 0.5em;
+}
+.tooltip .experience {
+  color: #34c9ff;
+}
+.tooltip .fun {
+  color: #ffde00;
+}
+
+.filters {
+  text-align: start;
+}
+.filters ul li {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #fff;
+  font-size: 1.1rem;
+  padding: 0.4em;
+  border-radius: 0.4em;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+.filters ul li.active {
+  background: #fff;
+  color: #141414;
+}
+.filters ul li.help {
+  float: right;
+  border: none;
+}
+.filters input[type="text"] {
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .filters ul li {
+    display: none;
+  }
+  .filters ul li.active {
+    display: inline-block;
+  }
+  .filters ul li.help {
+    display: inline-block;
+  }
+  .filters ul li.search {
+    display: inline-block;
+  }
+  .filters.all ul li {
+    display: inline-block;
+  }
+  .filters.all ul li.active {
+    background: none;
+    color: #fff;
+  }
+  .filters.all ul li.search {
+    display: none;
+  }
+}
+.flip-list-move {
+  transition: transform 1s;
+}

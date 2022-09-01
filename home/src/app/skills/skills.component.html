@@ -1,0 +1,72 @@
+<p>
+  Anything! Like everybody, but I have
+  <span
+    class="order"
+    [ngClass]="{ active: currentOrder === SORT.EXPERIENCE }"
+    (click)="onSort(SORT.EXPERIENCE)"
+    >more experience</span
+  >
+  and find
+  <span
+    class="order fun"
+    [ngClass]="{ active: currentOrder === SORT.FUN }"
+    (click)="onSort(SORT.FUN)"
+    >more enjoyable</span
+  >
+  some specific things so I would try to list just few of them.
+</p>
+<div class="skills">
+  <div class="filters">
+    <ul>
+      <li
+        *ngFor="let filter of filters"
+        [ngClass]="{ active: filter === currentFilter }"
+        (click)="onFilter(filter)"
+      >
+        {{ filter.value }}
+      </li>
+      <li class="search">
+        <input
+          class="iconized"
+          type="text"
+          [ngModel]="search"
+          (ngModelChange)="onChangeSarch($event)"
+        />
+        <i class="fas fa-search input"></i>
+      </li>
+      <li class="help toggle" (click)="showTooltip = !showTooltip">
+        <i class="far fa-question-circle"></i>
+      </li>
+    </ul>
+  </div>
+  <div class="tooltip" *ngIf="showTooltip">
+    <ul>
+      <li class="experience">0% = Can it be eaten?</li>
+      <li class="experience">50% = I'll check SO</li>
+      <li class="experience">100% = I'm CEO bitch!</li>
+      <li class="fun">0% = Please no!</li>
+      <li class="fun">50% = I can handle it</li>
+      <li class="fun">100% = Oh. My. God!</li>
+    </ul>
+  </div>
+  <ng-template #loadingSkills>
+    <p class="loading">
+      I promise I can do things! I don't know why it's taking so much time to
+      load, there must be a lot of things 😲
+    </p>
+  </ng-template>
+  <ng-container *ngIf="filtedSkills$ | async as skills; else loadingSkills">
+    <ul class="items">
+      <li *ngFor="let skill of skills" homeTransitionGroupItem>
+        <home-skill-item
+          [name]="skill.name"
+          [url]="skill.link"
+          [experience]="skill.experience"
+          [fun]="skill.fun"
+          [images]="skill.images"
+          [icons]="skill.icons"
+        ></home-skill-item>
+      </li>
+    </ul>
+  </ng-container>
+</div>

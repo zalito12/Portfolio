@@ -1,0 +1,156 @@
+{
+  "hosting": [
+    {
+      "target": "root",
+      "public": "root-html/dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "redirects": [
+        {
+          "source": "/portfolio-home/:path*",
+          "destination": "https://home.gongarce.io/:path",
+          "type": 301
+        },
+        {
+          "source": "/portfolio-nav/:path*",
+          "destination": "https://nav.gongarce.io/:path",
+          "type": 301
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=7200"
+            }
+          ]
+        },
+        {
+          "source": "404.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=300"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "nav",
+      "public": "nav/dist/portfolio-nav",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://gongarce.io"
+            }
+          ]
+        },
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "home",
+      "public": "home/dist/portfolio-home",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://gongarce.io"
+            }
+          ]
+        },
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "styleguide",
+      "public": "styleguide/dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://gongarce.io"
+            }
+          ]
+        },
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "api",
+      "public": "api/dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://gongarce.io"
+            }
+          ]
+        },
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Vary",
+              "value": "Origin"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
