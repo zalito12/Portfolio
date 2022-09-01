@@ -32,7 +32,7 @@
 <div class="nav-min menu">
   <i class="fas fa-terminal toggle t-600" (click)="showMenu = !showMenu"></i>
   <span class="toggle t-900" (click)="showMenu = !showMenu"
-    >~/{{ page }}$ <span class="term">|</span></span
+    >~/{{ page.title }}$ <span class="term">|</span></span
   >
   <ul *ngIf="showMenu">
     <li *ngIf="page !== PAGES.HOME; else activeRoute">

@@ -7,12 +7,21 @@ import { Component, OnInit } from "@angular/core";
 })
 export class AppComponent implements OnInit {
   public PAGES = {
-    HOME: "home",
-    SHOWCASE: "showcase",
-    CONTACT: "contact",
+    HOME: {
+      path: "/home",
+      title: "home",
+    },
+    SHOWCASE: {
+      path: "/showcase",
+      title: "projects",
+    },
+    CONTACT: {
+      path: "/contact",
+      title: "contact",
+    },
   };
 
-  public page = this.PAGES.HOME;
+  public page: { path: string; title: string } = this.PAGES.HOME;
   public showMenu = false;
 
   ngOnInit() {
@@ -23,7 +32,7 @@ export class AppComponent implements OnInit {
     }
 
     for (const key in this.PAGES) {
-      if (path.includes(this.PAGES[key])) {
+      if (path == this.PAGES[key].path) {
         this.page = this.PAGES[key];
       }
     }
