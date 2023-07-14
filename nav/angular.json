@@ -18,13 +18,15 @@
             "main": "src/main.single-spa.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "buildOptimizer": false,
             "aot": false,
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.css"],
             "scripts": [],
             "customWebpackConfig": {
               "path": "./extra-webpack.config.js"
-            }
+            },
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
@@ -49,7 +51,8 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "baseHref": "/portfolio-nav"
             }
           }
         },

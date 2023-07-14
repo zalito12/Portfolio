@@ -24,7 +24,7 @@
     "type": "LANGUAGES",
     "name": "JavaScript",
     "link": "https://developer.mozilla.org/es/docs/Web/JavaScript",
-    "images": null,
+    "images": ["tsjs.png"],
     "icons": [{ "class": "fab fa-js", "color": "#efd81d" }],
     "experience": 72,
     "fun": 70
