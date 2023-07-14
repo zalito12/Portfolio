@@ -54,7 +54,7 @@
           "@gongarce/root-config": "//localhost:9000/gongarce-root-config.js",
           "@gongarce/styleguide": "http://localhost:4100/gongarce-styleguide.js",
           "@gongarce/api": "http://localhost:4200/gongarce-api.js",
-          "nav": "http://localhost:4201/main.js",
+          "portfolio-nav": "http://localhost:4201/main.js",
           "portfolio-home": "http://localhost:4202/main.js",
           "portfolio-showcase": "http://localhost:4203/main.js"
         }
@@ -67,20 +67,20 @@
     Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
   -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/bundles/zone.umd.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/zone.js@0.13.1/dist/zone.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
     <% if (isLocal) { %>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.1/dist/system.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.1/dist/extras/amd.js"></script>
     <% } else { %>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.1/dist/system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.1/dist/extras/amd.min.js"></script>
     <% } %>
 
     <template id="single-spa-layout">
       <single-spa-router>
-        <application name="nav"></application>
+        <application name="portfolio-nav"></application>
         <div class="main-content">
           <route path="home">
             <application name="portfolio-home" loader="mainContentLoader"></application>

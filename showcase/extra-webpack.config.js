@@ -4,25 +4,17 @@ const webpackMerge = require('webpack-merge');
 module.exports = (config, options) => {
   const singleSpaWebpackConfig = singleSpaAngularWebpack(config, options);
 
-  const externalsConfig = {
-    externals: [
-      {
-        rxjs: 'rxjs',
-        'rxjs/operators': 'rxjs/operators'
-      },
-      /^@gongarce\/api$/
-    ]
-  };
+  singleSpaWebpackConfig.externals.push('rxjs', 'rxjs/operators', /^@gongarce\/api$/);
 
   const library = {
     output: {
       library: 'portfolio-showcase'
     }
   };
-  const mergedConfig = webpackMerge.smart(singleSpaWebpackConfig, externalsConfig, library);
+
+  const mergedConfig = webpackMerge.merge(singleSpaWebpackConfig, library);
 
   console.log(mergedConfig);
 
-  // Feel free to modify this webpack config however you'd like to
   return mergedConfig;
 };
