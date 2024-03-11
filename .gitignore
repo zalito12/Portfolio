@@ -3,6 +3,7 @@
 #Firebase
 .firebaserc
 .firebase/
+*.log
 
 # compiled output
 /dist
