@@ -18,13 +18,15 @@
             "main": "src/main.single-spa.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "buildOptimizer": false,
             "aot": false,
             "assets": ["src/assets"],
             "styles": ["src/styles.css"],
             "scripts": [],
             "customWebpackConfig": {
               "path": "./extra-webpack.config.js"
-            }
+            },
+            "deployUrl": "http://localhost:4202"
           },
           "configurations": {
             "production": {
@@ -37,7 +39,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -49,7 +50,8 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "deployUrl": "/portfolio-home"
             }
           }
         },

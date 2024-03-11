@@ -30,8 +30,14 @@ That way you can see how micro frontends work in a real life situation.
 
 I configured firebase host on `firebase.json` to allow CORS from the main host in every subdomain.
 
+#### Development
+
+Use the script `runner.bat`
+
+#### Production
+
 Deploy from root with command: `firebase deploy --only hosting:target`
 
 # Compatibility
 
-[*] Node 12.16.1
+[*] Node 16.13.2
